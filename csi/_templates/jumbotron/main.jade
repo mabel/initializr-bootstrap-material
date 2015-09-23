@@ -1,0 +1,10 @@
+include ../../_lib/constants.jade
+
+.jumbotron
+    .container(data-cms='main')
+
+script
+    :coffee-script
+        sectionId = "!{sectionId}"
+        $sect     = $ '#' + sectionId 
+

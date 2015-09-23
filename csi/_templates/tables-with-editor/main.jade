@@ -1,0 +1,15 @@
+include ../../_lib/constants.jade
+
+- var withAddingPanel = true
+- var withMainEditor  = true
+- var withMainTable   = true
+- var withArchTable   = true
+
+include slices/page.jade
+
+script
+    :coffee
+        sectionId = "!{sectionId}"
+        $sect     = $ '#' + sectionId 
+        $sect.attr 'data-csi-template', "!{template}"
+

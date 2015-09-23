@@ -1,0 +1,29 @@
+if withMainEditor
+    .modal(id="#{sectionId}-main-editor")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type='button' data-dismiss='modal' aria-hidden='true') x
+                    h4
+                        | &nbsp;
+                .modal-body
+                    block modalBody
+                        input(type='hidden' name='id')
+                        div(class="form-group")
+                            label(class=['col-lg-4', 'control-label']) #{fieldLabelName}
+                        div(class="col-lg-8")
+                            input(class="form-control" type="text" name='name')
+                    div(id='#{sectionId}-main-editor-message' class='hidden')
+                        div(class=["alert", "alert-dismissable alert-danger"])
+                            button(type="button" class="close" data-dismiss="alert") ×
+                            h4 
+                                | &nbsp;
+                .modal-footer
+                    br
+                    block modalFooter
+                        input(class=buttonStylePrimary type='submit' value="#{buttonTextSave}")
+                        button(class=buttonStylePrimary data-dismiss='modal') #{buttonTextClose}
+
+
+
+

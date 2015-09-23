@@ -1,0 +1,9 @@
+extend ../../_lib/menu.jade
+block menuItems
+    li.active: a(href="#csi-test1" tabindex=201) #{test1Link}
+    li: a(href="#csi-test2" tabindex=202)        #{test2Link}
+
+block menuRight
+    ul(class=['nav', 'navbar-nav', 'navbar-right'])
+        li
+            | &nbsp;

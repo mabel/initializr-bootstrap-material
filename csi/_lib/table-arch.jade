@@ -1,0 +1,17 @@
+if withArchTable
+    div.hidden(id='#{sectionId}-arch-table-holder')
+        br
+        h4 #{archTableName}
+        table(data-url='/json/#{sectionId}/arch' data-sort-name='name')
+            thead
+                block specialColumns
+                    th(data-field='name') #{nameColumn}
+                th( 
+                    data-width='60'
+                    data-field='unarch'
+                    data-formatter='common-unarch-formatter'
+                    data-events='#{sectionId}-unarch-events'
+                    data-align='center'
+                ) #{unarchColumn}
+
+

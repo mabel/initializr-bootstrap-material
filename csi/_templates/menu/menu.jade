@@ -1,0 +1,8 @@
+extend ../../_lib/menu.jade
+block menuItems
+    li.active: a(href="#admin-users-usr" tabindex=201) #{menuUsers}
+
+block menuRight
+    ul(class=['nav', 'navbar-nav', 'navbar-right'])
+        li
+            | &nbsp;

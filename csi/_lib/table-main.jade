@@ -1,0 +1,30 @@
+if withMainTable
+    div.hidden(id='#{sectionId}-main-table-holder')
+        br
+        table(data-url='/json/#{sectionId}/table' data-sort-name='name')
+            thead
+                block specialColumns
+                    th(data-field='name') #{nameColumn}
+                th(
+                    data-field='edit'
+                    data-width='60'
+                    data-align='center'
+                    data-formatter='common-edit-formatter'
+                    data-events='#{sectionId}-edit-events'
+                ) #{editColumn}
+                th( 
+                    data-width='60'
+                    data-field='state'
+                    data-formatter='common-state-formatter'
+                    data-events='#{sectionId}-state-events'
+                    data-align='center'
+                ) #{stateColumn}
+                th( 
+                    data-width='60'
+                    data-field='arch'
+                    data-formatter='common-arch-formatter'
+                    data-events='#{sectionId}-arch-events'
+                    data-align='center'
+                ) #{archColumn}
+
+

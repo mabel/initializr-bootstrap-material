@@ -1,0 +1,17 @@
+if withAddingPanel
+    .panel(class=['panel-default'] id='#{sectionId}-adding-panel')
+        .panel-body
+            .row
+                .col-lg-3
+                    h4 #{panelHeading}
+                block specialCols    
+                    .col-lg-4
+                        | &nbsp;
+                    .col-lg-3(id="#{sectionId}-show-arch")
+                block addButton
+                    .col-lg-2
+                        input(class=buttonStylePrimary type='submit' value='#{buttonTextAdd}')
+            block panelRestOfPanelRows
+                .row
+                    .col-lg-12
+
